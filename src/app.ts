@@ -12,7 +12,7 @@ app.use(globalErrorHandler);
 app.get('/', (req: Request, res: Response) => {
   res.status(httpStatus.OK).json({
     success: true,
-    message: 'welcome!',
+    message: 'welcome home!',
     path: req.originalUrl
   })
 })
