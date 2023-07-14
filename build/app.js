@@ -15,7 +15,7 @@ app.use(global_error_handler_1.default);
 app.get('/', (req, res) => {
     res.status(http_status_1.default.OK).json({
         success: true,
-        message: 'welcome!',
+        message: 'welcome home!',
         path: req.originalUrl
     });
 });
