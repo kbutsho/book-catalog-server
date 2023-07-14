@@ -9,11 +9,8 @@ const api_error_1 = __importDefault(require("./api.error"));
 const validation_error_1 = __importDefault(require("./validation.error"));
 const cast_error_1 = __importDefault(require("./cast.error"));
 const zod_error_1 = __importDefault(require("./zod.error"));
-const logger_1 = require("../shared/logger");
 const globalErrorHandler = (error, req, res, next) => {
-    config_1.default.env === 'development'
-        ? console.log(`error: `, { error })
-        : logger_1.errorLogger.error(`error: `, error);
+    console.log(`error: `, { error });
     let statusCode = 500;
     let message = 'Something went wrong !';
     let errorMessages = [];
