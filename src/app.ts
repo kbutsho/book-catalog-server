@@ -1,13 +1,12 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import globalErrorHandler from "./errorHandler/global.error.handler";
 import httpStatus from 'http-status';
+import router from "./app/routes";
 
 const app: Application = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// route
-// app.use('/api/v1', routes);
+app.use('/api/v1', router);
 app.use(globalErrorHandler);
 app.get('/', (req: Request, res: Response) => {
   res.status(httpStatus.OK).json({
