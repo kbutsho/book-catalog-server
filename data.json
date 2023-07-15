@@ -1,0 +1,152 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Fiction",
+        "publicationDate": "1925-04-01",
+        "reviews": [
+            "A classic novel with a captivating storyline.",
+            "A powerful and thought-provoking novel that addresses important social issues.",
+            "An iconic American literary masterpiece.",
+            "A must-read for anyone interested in the Jazz Age.",
+            "The prose is elegant and the characters are deeply memorable."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/191/350/555/4/9781913505554.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Fiction",
+        "publicationDate": "2225-04-01",
+        "reviews": [
+            "A powerful and thought-provoking novel that addresses important social issues.",
+            "A dystopian masterpiece that remains relevant today.",
+            "One of the greatest works of American literature.",
+            "The characters are unforgettable and the themes are timeless.",
+            "An emotionally charged and profoundly moving story."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/059/342/052/2/9780593420522.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "Fiction",
+        "publicationDate": "1988-09-01",
+        "reviews": [
+            "A dystopian masterpiece that remains relevant today.",
+            "A coming-of-age novel that resonates with teenagers and adults alike.",
+            "Orwell's vision of a totalitarian society is chilling and prophetic.",
+            "The book is a powerful warning against the dangers of government surveillance.",
+            "A thought-provoking exploration of individual freedom and resistance."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/173/325/856/2/9781733258562.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Fiction",
+        "publicationDate": "1825-04-01",
+        "reviews": [
+            "A delightful romantic novel filled with wit and social commentary.",
+            "An enchanting and thrilling fantasy tale with a unique twist on mermaids.",
+            "A timeless classic that showcases Austen's keen observation of society.",
+            "The characters are vividly drawn and the dialogue is sharp and humorous.",
+            "The novel is a captivating exploration of love, marriage, and societal expectations."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/979/898/648/013/8/9798986480138.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "Fiction",
+        "publicationDate": "1944-04-05",
+        "reviews": [
+            "A coming-of-age novel that resonates with teenagers and adults alike.",
+            "A timeless exploration of teenage angst and alienation.",
+            "Holden Caulfield's voice is authentic and unforgettable.",
+            "The novel continues to resonate with each new generation of readers.",
+            "An honest and introspective portrayal of adolescence and the loss of innocence."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/195/800/578/1/9781958005781.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "To Kill a Kingdom",
+        "author": "Alexandra Christo",
+        "genre": "Young Adult Fantasy",
+        "publicationDate": "2000-04-01",
+        "reviews": [
+            "An enchanting and thrilling fantasy tale with a unique twist on mermaids.",
+            "An immersive and beautifully written story that captivates from beginning to end.",
+            "The world-building is rich and imaginative.",
+            "The characters are complex and their moral dilemmas add depth to the narrative.",
+            "A must-read for fans of fantasy and fairy tale retellings."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/979/898/778/952/0/9798987789520.jpg",
+        "userId": "64b22f95df8cd04b0188528b"
+    },
+    {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "genre": "Fiction",
+        "publicationDate": "1900-04-01",
+        "reviews": [
+            "A philosophical and inspiring novel about following your dreams.",
+            "The book offers profound insights into life, destiny, and the pursuit of happiness.",
+            "Coelho's storytelling is poetic and filled with spiritual wisdom.",
+            "The novel encourages readers to reflect on their own personal journeys.",
+            "A transformative read that leaves a lasting impact."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/168/513/134/0/9781685131340.jpg",
+        "userId": "64b247e6e65a3622930f2261"
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "publicationDate": "1999-04-01",
+        "reviews": [
+            "An adventurous and enchanting tale set in Middle-earth.",
+            "Tolkien's world-building is masterful and captivating.",
+            "The characters are lovable and the story is filled with thrilling escapades.",
+            "A timeless classic that has inspired generations of fantasy lovers.",
+            "The novel is a prelude to the epic tale of 'The Lord of the Rings'."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/168/513/134/0/9781685131340.jpg",
+        "userId": "64b247e6e65a3622930f2261"
+    },
+    {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "publicationDate": "2021-04-01",
+        "reviews": [
+            "The start of an incredible magical journey that captivates readers of all ages.",
+            "Rowling's world-building is rich and imaginative.",
+            "The characters are memorable and the story is filled with adventure and friendship.",
+            "A spellbinding tale that sparked a global phenomenon.",
+            "The novel has a perfect balance of whimsy, mystery, and heart."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/195/474/496/7/9781954744967.jpg",
+        "userId": "64b247e6e65a3622930f2261"
+    },
+    {
+        "title": "The Da Vinci Code",
+        "author": "Dan Brown",
+        "genre": "Thriller",
+        "publicationDate": "2023-04-01",
+        "reviews": [
+            "A gripping and fast-paced thriller with intricate puzzles and historical intrigue.",
+            "Brown's storytelling keeps readers on the edge of their seats.",
+            "The plot is full of twists and turns that keep you guessing until the end.",
+            "The book seamlessly weaves together art, history, and conspiracy.",
+            "A thrilling page-turner that is impossible to put down."
+        ],
+        "image": "https://d1ldy8a769gy68.cloudfront.net/200/978/164/445/233/2/9781644452332.jpg",
+        "userId": "64b247e6e65a3622930f2261"
+    }
+]
