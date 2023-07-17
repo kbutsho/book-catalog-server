@@ -60,7 +60,7 @@ const getSingleBook = async (id: string): Promise<IBook | null> => {
 };
 
 const update = async (bookId: string, userId: string, data: Partial<IBook>): Promise<IBook | null> => {
-  const isVerifiedUser = await Book.findOne({ userId: userId });
+  const isVerifiedUser = await Book.findOne({ userId: userId, _id: bookId });
   if (!isVerifiedUser) {
     throw new ApiError(httpStatus.FORBIDDEN, 'you are not authorized of this book!');
   }
