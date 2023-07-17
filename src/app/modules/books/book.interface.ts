@@ -6,7 +6,7 @@ export type IBook = {
   genre: string;
   publicationDate: Date;
   userId: ObjectId;
-  image: string
+  image: string;
 }
 
 export type BookModel = Model<IBook, Record<string, unknown>>;
