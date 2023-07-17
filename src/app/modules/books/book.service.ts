@@ -71,7 +71,7 @@ const update = async (bookId: string, userId: string, data: Partial<IBook>): Pro
 const deleteBook = async (bookId: string, userId: string): Promise<IBook | null> => {
   const isVerifiedUser = await Book.findOne({ userId: userId });
   if (!isVerifiedUser) {
-    throw new ApiError(httpStatus.FORBIDDEN, 'you are not authorized of this cow!');
+    throw new ApiError(httpStatus.FORBIDDEN, 'you are not authorized of this book!');
   }
   const result = await Book.findByIdAndDelete(bookId);
   return result;
