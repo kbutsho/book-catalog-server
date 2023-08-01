@@ -3,7 +3,7 @@ import { paginationHelpers } from "../../../helpers/paginationHelpers";
 import { IGenericResponse } from "../../../interfaces/common";
 import { IPaginationOptions } from "../../../interfaces/pagination";
 import { bookSearchableFields } from "./book.constant";
-import { IBook, IBookFilters } from "./book.interface";
+import { IBook, IBookFilters, IGenre, IPublicationDateRange } from "./book.interface";
 import { Book } from "./book.model";
 import ApiError from "../../../errorHandler/api.error";
 import httpStatus from "http-status";
@@ -14,7 +14,7 @@ const create = async (data: IBook): Promise<IBook> => {
 }
 
 const getAllBook = async (filters: IBookFilters, paginationOptions: IPaginationOptions): Promise<IGenericResponse<IBook[]>> => {
-  const { searchTerm, ...filtersData } = filters;
+  const { searchTerm, minPublicationDate, maxPublicationDate, genre, ...filtersData } = filters;
   const { page, limit, skip, sortBy, sortOrder } = paginationHelpers.calculatePagination(paginationOptions);
   const andConditions = [];
   if (searchTerm) {
@@ -27,7 +27,6 @@ const getAllBook = async (filters: IBookFilters, paginationOptions: IPaginationO
       })),
     });
   }
-
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -39,6 +38,21 @@ const getAllBook = async (filters: IBookFilters, paginationOptions: IPaginationO
   const sortConditions: { [key: string]: SortOrder } = {};
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
+  }
+
+  if (maxPublicationDate) {
+    andConditions.push({
+      $expr: {
+        $lte: [{ $year: { date: "$publicationDate" } }, parseInt(maxPublicationDate)]
+      }
+    });
+  }
+  if (minPublicationDate) {
+    andConditions.push({
+      $expr: {
+        $gte: [{ $year: { date: "$publicationDate" } }, parseInt(minPublicationDate)]
+      }
+    });
   }
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
@@ -77,10 +91,42 @@ const deleteBook = async (bookId: string, userId: string): Promise<IBook | null>
   return result;
 };
 
+const getAllGenre = async (): Promise<IGenre[] | []> => {
+  const getAllGenre: IGenre[] | [] = await Book.distinct('genre');
+  return getAllGenre;
+}
+
+const getBookPublicationRange = async (): Promise<number[] | []> => {
+  const dateRange = await Book.aggregate([
+    {
+      $group: {
+        _id: null,
+        minPublicationYear: { $min: { $year: "$publicationDate" } },
+        maxPublicationYear: { $max: { $year: "$publicationDate" } }
+      }
+    },
+    {
+      $project: {
+        _id: 0,
+        range: ["$minPublicationYear", "$maxPublicationYear"]
+      }
+    }
+  ]);
+
+  // 'dateRange' will be an array with a single object containing the range array.
+  // If the collection is empty, the result will be an empty array.
+  return dateRange[0]?.range || [];
+};
+
+
+
+
 export const BookService = {
   create,
   getAllBook,
   getSingleBook,
   update,
-  deleteBook
+  deleteBook,
+  getAllGenre,
+  getBookPublicationRange
 };

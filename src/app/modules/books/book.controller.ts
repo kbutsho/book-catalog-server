@@ -3,7 +3,7 @@ import { Request, RequestHandler, Response } from "express";
 import catchAsync from "../../../shared/catch.async";
 import { BookService } from "./book.service";
 import sendResponse from "../../../shared/response.send";
-import { IBook } from "./book.interface";
+import { IBook, IGenre, IPublicationDateRange } from "./book.interface";
 import httpStatus from "http-status";
 import { bookFilterableFields } from "./book.constant";
 import pick from "../../../shared/pick";
@@ -29,6 +29,26 @@ const getAllBook: RequestHandler = catchAsync(async (req: Request, res: Response
     message: `${result.data.length} out of ${result.meta.total} books  retrieved successfully!`,
     meta: result.meta,
     data: result.data
+  });
+})
+
+const getAllGenre: RequestHandler = catchAsync(async (req: Request, res: Response) => {
+  const result = await BookService.getAllGenre();
+  sendResponse<IGenre[]>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: `genre found ${result.length}!`,
+    data: result
+  });
+})
+
+const getPublicationDateRange: RequestHandler = catchAsync(async (req: Request, res: Response) => {
+  const result = await BookService.getBookPublicationRange();
+  sendResponse<IPublicationDateRange>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: `publication date range found!`,
+    data: result
   });
 })
 
@@ -72,5 +92,7 @@ export const BookController = {
   getAllBook,
   getSingleBook,
   updateBook,
-  deleteBook
+  deleteBook,
+  getAllGenre,
+  getPublicationDateRange
 };
